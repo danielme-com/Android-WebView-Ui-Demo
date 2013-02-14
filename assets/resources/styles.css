@@ -1,0 +1,52 @@
+/*
+ * Copyright (C) 2013 Daniel Medina <http://danielme.com>
+ * 
+ * This file is part of "Android WebView UI Demo".
+ * 
+ * "Android WebView UI Demo" is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * "Android WebView UI Demo" is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License version 3
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl-3.0.html/>
+ */
+ 
+body
+{
+ margin:5px; 
+ -webkit-user-modify: read-write-plaintext-only;
+ -webkit-tap-highlight-color:rgba(0,0,0,0);
+} 
+
+.button 
+{
+-webkit-border-radius:5px;
+
+}
+.button:hover 
+{
+background-color: #e8e8e8;
+}
+
+#title
+{
+ font-size:x-large;
+ color: blue;
+}
+
+.content
+{
+ border-radius: 10px;
+ background-color: grey;
+}
+
+.center
+{
+ margin:auto;
+ width:70%;
+}

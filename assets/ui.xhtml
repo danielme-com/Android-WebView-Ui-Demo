@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- 
+/*
+ * Copyright (C) 2013 Daniel Medina <http://danielme.com>
+ * 
+ * This file is part of "Android WebView UI Demo".
+ * 
+ * "Android WebView UI Demo" is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, version 3.
+ *
+ * "Android WebView UI Demo" is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License version 3
+ * along with this program.  If not, see <http://www.gnu.org/licenses/gpl-3.0.html/>
+ */
+ -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>WebView UI demo</title>
+		<link rel="stylesheet" type="text/css" href="resources/styles.css"/>
+		<script src="resources/jquery19.js"></script>
+		<script type="text/javascript">
+		<![CDATA[
+			function showContacts()
+			{	
+			    //here we are calling a Java method!!
+	            var data = MainActivity.getContacts();
+	            
+	            if (data != "")
+	            {
+					$('#contacts').html(data);
+					$('#contacts').slideDown(1000);
+				}
+				else
+				{
+				  $('#contacts').html("no contacts found");
+				  $('#contacts').css('display','block');
+				}
+			}
+		]]>
+		</script>
+		
+	</head>
+
+	<body>
+	
+		<div id="title">WebView UI Demo</div>
+			
+		<div id="content1" class="content">
+			<div id = "form" class="center">
+			     <input type="text" id="input" maxlength="50" />
+			     <input class="button" type="button" value="Send to Activity" onclick="MainActivity.getFromWebView(document.getElementById('input').value)" />
+			</div> 
+		</div>
+		<div id="content2" class="content" style="margin-top:10px">
+			
+			      <input class="button" type="button" value="Contacts" onclick="showContacts();" />
+				<div id ="contacts" style="display:none">
+				</div>
+		</div>		 
+	
+	</body>
+
+</html>
