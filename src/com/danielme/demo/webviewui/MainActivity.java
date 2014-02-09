@@ -82,6 +82,18 @@ public class MainActivity extends Activity
 			contacts.close();
 			return data.toString();
 		}
+		
+		@JavascriptInterface
+		public String getString(String key)
+		{
+			String text = "";
+			int id = getResources().getIdentifier(key, "string", getPackageName());
+			if (id > 0)
+			{
+				text =  MainActivity.this.getString(id);
+			}
+			return text;
+		}
 	}
 
 }

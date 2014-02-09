@@ -40,10 +40,14 @@
 				}
 				else
 				{
-				  $('#contacts').html("no contacts found");
+				  $('#contacts').html(new String(MainActivity.getString("nocontacts")));
 				  $('#contacts').css('display','block');
 				}
 			}
+			$( document ).ready(function() {
+				$('#b_contacts').prop('value', MainActivity.getString("contacts"));
+				$('#b_send').prop('value',MainActivity.getString("send"));
+			});
 		]]>
 		</script>
 		
@@ -56,12 +60,12 @@
 		<div id="content1" class="content">
 			<div id = "form" class="center">
 			     <input type="text" id="input" maxlength="50" />
-			     <input class="button" type="button" value="Send to Activity" onclick="MainActivity.getFromWebView(document.getElementById('input').value)" />
+			     <input id="b_send" class="button" type="button" onclick="MainActivity.getFromWebView(document.getElementById('input').value)" />
 			</div> 
 		</div>
 		<div id="content2" class="content" style="margin-top:10px">
 			
-			      <input class="button" type="button" value="Contacts" onclick="showContacts();" />
+			      <input id="b_contacts" class="button" type="button" onclick="showContacts();" />
 				<div id ="contacts" style="display:none">
 				</div>
 		</div>		 

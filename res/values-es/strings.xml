@@ -23,8 +23,8 @@
     <string name="app_name">WebView UI Demo - danielme.com</string>
     <string name="ok">OK</string>
     <string name="info">info</string>
-    <string name="nocontacts">Contacts not found</string>
-    <string name="contacts">Contacts</string>
-    <string name="send">Send to Activity</string>
+    <string name="nocontacts">Contactos no encontrados</string>
+    <string name="contacts">Contactos</string>
+    <string name="send">Enviar a Activity</string>
 
 </resources>
